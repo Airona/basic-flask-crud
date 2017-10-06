@@ -1,0 +1,8 @@
+<form action="/programs/update/{{ program.id }}" method="POST">
+	<label>Päivitä - Update:<br />Ohjelman nimi -Program name</label><br />
+	<input type="hidden" name="id" value="{{ program.id }}">
+	<input type="text" name="name" value="{{ program.name }}">
+	<input type="submit" value="update">
+	<br /><br />
+	<a href="/programs">Takaisin - Back</a>
+</form>

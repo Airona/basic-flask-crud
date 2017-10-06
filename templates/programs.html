@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%block title%} Programs {%endblock title%}
+
+{% block content %}
+	<h1>Ohjelma lista - Programs</h1>
+	<a href="/">Etusivu - Frontpage</a>
+	<br /><br /><br />
+	<a href="/programs/add">Uusi ohjelma - Create program</a>
+	<br /><br />
+	<table>
+		<thead>
+			<tr>
+				<th>Ohjelma - Program</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+ {% for program in programs %}
+			<tr>
+				<td>
+					<p>{{ program.name }}</p>
+				</td>
+				<td>
+				   <a href="/programs/update/{{ program.id }}">Update</a>
+				</td>
+				<td>
+				   <a href="/programs/delete/{{ program.id }}">Delete</a>
+				</td>
+			</tr>
+ {% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
