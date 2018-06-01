@@ -1,2 +1,2 @@
 # basic-flask-crud
-Python Flask & PostgreSQL
+Example with Python Flask & PostgreSQL
